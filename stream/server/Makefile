@@ -1,5 +1,5 @@
-TARGET = showip
-SRC = showip.c
+TARGET = server
+SRC = server.c
 CC = gcc
 CFLAGS = -Wextra -Wall
 
