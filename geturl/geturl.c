@@ -186,7 +186,7 @@ int main(int argc, char **argv)
     char *url = NULL;
     char *port = NULL;
 
-    if (argc != 2) {
+    if (argc < 2) {
         fprintf(stderr, "Usage: geturl <url> <port=80>\n");
         ret_val = 1;
         goto usage_error;
@@ -208,7 +208,7 @@ int main(int argc, char **argv)
             host = strndup(address, url - address);
         }
 
-        if (argc == 3)
+        if (argc > 2)
             port = argv[2];
         else
             port = "80";
